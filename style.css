@@ -1,0 +1,142 @@
+:root {
+  --bg: #fdfdfb;
+  --text-primary: #3d4a3d;
+  --accent: #8fb394;
+  --accent-light: #e0ece0;
+  --accent-dark: #5b7a5b;
+  --shadow: rgba(0, 0, 0, 0.03);
+  --border-radius: 4px;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--accent-light);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.header .subtitle {
+  font-style: italic;
+  color: #888;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px 60px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--accent-light);
+  padding-bottom: 20px;
+}
+
+#searchInput {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: inherit;
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+button {
+  display: none;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 40px 0 20px;
+}
+
+.paper-card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent-light);
+  transition: all 0.3s ease;
+}
+
+.paper-card:hover {
+  box-shadow: 0 10px 20px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.paper-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.paper-summary {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.action-link {
+  color: var(--accent-dark);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}

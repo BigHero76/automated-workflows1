@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Research Reader</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav-bar">
+      <a onclick="showSection('results')">Search Results</a>
+      <a onclick="showSection('savedPapers')">Saved for Later</a>
+      <a onclick="showSection('recentPapers')">Recently Read</a>
+  </nav>
+
+  <header class="header">
+      <h1>AI Research Reader</h1>
+      <p class="subtitle">A minimal space for deep thought</p>
+  </header>
+
+  <main class="container">
+
+      <section class="search-section">
+          <input id="searchInput" placeholder="Search research papers..." onkeypress="if(event.key === 'Enter') searchPapers()">
+      </section>
+
+      <div id="results-section">
+          <div class="section-title">Search Results</div>
+          <div id="results"></div>
+      </div>
+
+      <div id="saved-section" class="hidden">
+          <div class="section-title">Saved for Later</div>
+          <div id="savedPapers"></div>
+      </div>
+
+      <div id="recent-section" class="hidden">
+          <div class="section-title">Recently Read</div>
+          <div id="recentPapers"></div>
+      </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
