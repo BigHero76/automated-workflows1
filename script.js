@@ -32,7 +32,7 @@ async function searchPapers() {
 
     const data = await response.json();
     console.log("BACKEND RESPONSE:", data);
-    currentResults = data;
+    currentResults = data.papers || [];
     showSection('results');
     renderResults();
   } catch (error) {
