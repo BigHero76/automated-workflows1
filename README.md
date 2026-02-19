@@ -62,6 +62,7 @@ Activate the workflow
 
 ```
 
+```bash
 🌍 Webhook URL Format
 Update your frontend or external service to call:
 
@@ -69,11 +70,18 @@ https://your-n8n-domain/webhook/webhook
 Example (local):
 
 http://localhost:5678/webhook/webhook
+
+```
+
+```bash
 💻 Frontend Structure
 📂 Frontend
  ├── index.html   → Main layout
  ├── style.css    → Sage-green aesthetic styling
  └── script.js    → Fetches data from webhook & renders it
+
+```
+
 ▶️ Run Frontend Locally
 You can open it using:
 
