@@ -31,22 +31,19 @@ async function searchPapers(initial = false) {
       body: JSON.stringify({ query })
     });
 
-    const data = await response.json();
-
+  const data = await response.json();
   console.log("TYPE:", typeof data);
   console.log("IS ARRAY:", Array.isArray(data));
   console.log("FULL DATA:", JSON.stringify(data, null, 2));
 
   currentResults = data.papers || [];
 
-    showSection('results');
-    renderResults();
-
+  showSection('results');
+  renderResults();
   } catch (error) {
     console.error("Error fetching papers:", error);
   }
 }
-
 function renderResults() {
   const container = document.getElementById("results");
   container.innerHTML = "";
