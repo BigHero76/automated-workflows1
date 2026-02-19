@@ -133,6 +133,3 @@ Deployment guide
 Error handling UI
 ```
 
-🤝 Contributing
-Pull requests are welcome!
-If you’d like to improve the UI or workflows, feel free to fork and submit a PR.
