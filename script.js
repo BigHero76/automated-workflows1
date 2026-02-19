@@ -19,11 +19,9 @@ function showSection(sectionId) {
   }
 }
 
-// ✅ UPDATED FUNCTION
 async function searchPapers(initial = false) {
   const query = searchInput?.value?.trim() || "";
 
-  // Only block if user manually triggered with empty input
   if (!query && !initial) return;
 
   try {
