@@ -21,6 +21,8 @@ function showSection(sectionId) {
 
 async function searchPapers(initial = false) {
   const query = searchInput?.value?.trim() || "";
+  console.log("SEARCH QUERY:", query);
+
 
   if (!query && !initial) return;
 
