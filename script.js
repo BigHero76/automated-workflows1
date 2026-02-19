@@ -34,7 +34,7 @@ async function searchPapers(initial = false) {
     const data = await response.json();
     console.log("BACKEND RESPONSE:", data);
 
-    currentResults = data[0]?.json?.papers || [];
+    currentResults = data.papers || [];
     showSection('results');
     renderResults();
 
