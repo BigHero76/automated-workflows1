@@ -24,13 +24,22 @@ git clone https://github.com/BigHero76/Automated-workflows.git
 cd Automated-workflows
 ```
 
+```bash
 2️⃣ Install n8n (If Not Installed)
 npm install -g n8n
+
+```
+
+```bash
 3️⃣ Run n8n Locally
 n8n
+
+```
 After running, open:
 
 http://localhost:5678
+
+
 🔗 Webhook Configuration
 Your frontend communicates with n8n using a Webhook node.
 
