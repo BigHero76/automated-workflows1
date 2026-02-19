@@ -20,34 +20,58 @@ function showSection(sectionId) {
 }
 
 async function searchPapers(initial = false) {
-  const searchInput = document.getElementById("searchInput");
-  const query = searchInput?.value?.trim() || "";
+  const input = document.getElementById("searchInput");
+  const query = input ? input.value.trim() : "";
 
   console.log("SEARCH QUERY:", query);
 
-  if (!query && !initial) return;
-
+  // If no query and not initial load → stop
+  if (!query && !initial) {
+    console.log("No query provided.");
+    return;
+  }
 
   try {
     const response = await fetch("http://localhost:5678/webhook/papers", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json" 
+      },
       body: JSON.stringify({ query })
     });
 
-  const data = await response.json();
-  console.log("TYPE:", typeof data);
-  console.log("IS ARRAY:", Array.isArray(data));
-  console.log("FULL DATA:", JSON.stringify(data, null, 2));
+    if (!response.ok) {
+      throw new Error("Server responded with " + response.status);
+    }
 
-  currentResults = data.papers || [];
+    const data = await response.json();
 
-  showSection('results');
-  renderResults();
+    console.log("RAW RESPONSE:", data);
+
+    // 🔥 Handle multiple possible response formats
+    if (Array.isArray(data)) {
+      currentResults = data;
+    } else if (Array.isArray(data.papers)) {
+      currentResults = data.papers;
+    } else if (Array.isArray(data.data)) {
+      currentResults = data.data;
+    } else {
+      currentResults = [];
+      console.warn("Unexpected response format.");
+    }
+
+    console.log("FINAL RESULTS:", currentResults);
+
+    showSection("results");
+    renderResults();
+
   } catch (error) {
     console.error("Error fetching papers:", error);
+    currentResults = [];
+    renderResults();
   }
 }
+
 function renderResults() {
   const container = document.getElementById("results");
   container.innerHTML = "";
