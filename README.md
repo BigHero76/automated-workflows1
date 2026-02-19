@@ -24,23 +24,25 @@ git clone https://github.com/BigHero76/Automated-workflows.git
 cd Automated-workflows
 ```
 
-```bash
+
 2️⃣ Install n8n (If Not Installed)
+```bash
 npm install -g n8n
 
 ```
 
-```bash
 3️⃣ Run n8n Locally
+```bash
 n8n
 
-```
+
 After running, open:
-
 http://localhost:5678
+```
 
-```bash
+
 🔗 Webhook Configuration
+```bash
 Your frontend communicates with n8n using a Webhook node.
 
 Steps to Configure
@@ -84,6 +86,7 @@ http://localhost:5678/webhook/webhook
 ```
 
 ▶️ Run Frontend Locally
+```bash
 You can open it using:
 
 VS Code Live Server
@@ -93,8 +96,10 @@ Any local web server
 Or simply double-click index.html
 
 The page automatically fetches data from your active webhook.
+```
 
 🧠 How It Works
+```bash
 Frontend → Webhook → n8n Workflow → Response → Rendered in UI
 Frontend sends POST request
 
@@ -103,19 +108,20 @@ n8n workflow processes data
 Webhook returns response
 
 UI renders response dynamically
+```
 
 📦 Tech Stack
+```bash
 n8n
-
-HTML5
-
-CSS3
-
-Vanilla JavaScript
-
+HTML
+CSS
+JavaScript
 Node.js
+```
 
-🔥 Future Improvements
+Future Improvements
+```bash
+
 Authentication layer
 
 Environment variable support
@@ -125,6 +131,7 @@ Docker support
 Deployment guide
 
 Error handling UI
+```
 
 🤝 Contributing
 Pull requests are welcome!
