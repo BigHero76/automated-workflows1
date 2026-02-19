@@ -19,9 +19,12 @@ function showSection(sectionId) {
   }
 }
 
-async function searchPapers() {
-  const query = searchInput.value.trim();
-  if (!query) return;
+// ✅ UPDATED FUNCTION
+async function searchPapers(initial = false) {
+  const query = searchInput?.value?.trim() || "";
+
+  // Only block if user manually triggered with empty input
+  if (!query && !initial) return;
 
   try {
     const response = await fetch("http://localhost:5678/webhook/papers", {
@@ -32,9 +35,11 @@ async function searchPapers() {
 
     const data = await response.json();
     console.log("BACKEND RESPONSE:", data);
+
     currentResults = data.papers || [];
     showSection('results');
     renderResults();
+
   } catch (error) {
     console.error("Error fetching papers:", error);
   }
