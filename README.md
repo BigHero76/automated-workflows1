@@ -62,8 +62,8 @@ Activate the workflow
 
 ```
 
-```bash
 🌍 Webhook URL Format
+```bash
 Update your frontend or external service to call:
 
 https://your-n8n-domain/webhook/webhook
@@ -73,8 +73,9 @@ http://localhost:5678/webhook/webhook
 
 ```
 
-```bash
+
 💻 Frontend Structure
+```bash
 📂 Frontend
  ├── index.html   → Main layout
  ├── style.css    → Sage-green aesthetic styling
