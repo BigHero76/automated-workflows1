@@ -20,11 +20,13 @@ function showSection(sectionId) {
 }
 
 async function searchPapers(initial = false) {
+  const searchInput = document.getElementById("searchInput");
   const query = searchInput?.value?.trim() || "";
+
   console.log("SEARCH QUERY:", query);
 
-
   if (!query && !initial) return;
+
 
   try {
     const response = await fetch("http://localhost:5678/webhook/papers", {
