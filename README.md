@@ -39,7 +39,7 @@ After running, open:
 
 http://localhost:5678
 
-
+```bash
 🔗 Webhook Configuration
 Your frontend communicates with n8n using a Webhook node.
 
@@ -59,6 +59,8 @@ webhook
 Set HTTP Method → POST
 
 Activate the workflow
+
+```
 
 🌍 Webhook URL Format
 Update your frontend or external service to call:
