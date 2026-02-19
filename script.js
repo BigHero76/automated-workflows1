@@ -32,9 +32,13 @@ async function searchPapers(initial = false) {
     });
 
     const data = await response.json();
-    console.log("BACKEND RESPONSE:", data);
 
-    currentResults = data.papers || [];
+  console.log("TYPE:", typeof data);
+  console.log("IS ARRAY:", Array.isArray(data));
+  console.log("FULL DATA:", JSON.stringify(data, null, 2));
+
+  currentResults = data.papers || [];
+
     showSection('results');
     renderResults();
 
