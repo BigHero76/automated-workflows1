@@ -22,6 +22,8 @@ A simple automation system powered by **n8n** with a clean frontend that communi
 
 git clone https://github.com/BigHero76/Automated-workflows.git
 cd Automated-workflows
+```
+
 2️⃣ Install n8n (If Not Installed)
 npm install -g n8n
 3️⃣ Run n8n Locally
