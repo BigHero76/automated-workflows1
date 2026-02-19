@@ -19,17 +19,22 @@ function showSection(sectionId) {
   }
 }
 
-async function searchPapers(initial = false) {
+  async function searchPapers(initial = false) {
   const input = document.getElementById("searchInput");
-  const query = input ? input.value.trim() : "";
+
+  if (!input) {
+    console.log("Input not found");
+    return;
+  }
+
+  console.log("INPUT VALUE RAW:", input.value);
+
+  const query = input.value.trim();
 
   console.log("SEARCH QUERY:", query);
 
-  // If no query and not initial load → stop
-  if (!query && !initial) {
-    console.log("No query provided.");
-    return;
-  }
+  if (!query && !initial) return;
+
 
   try {
     const response = await fetch("http://localhost:5678/webhook/papers", {
@@ -48,7 +53,6 @@ async function searchPapers(initial = false) {
 
     console.log("RAW RESPONSE:", data);
 
-    // 🔥 Handle multiple possible response formats
     if (Array.isArray(data)) {
       currentResults = data;
     } else if (Array.isArray(data.papers)) {
