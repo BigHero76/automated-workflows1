@@ -44,5 +44,14 @@
   </main>
 
   <script src="script.js"></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (typeof searchPapers === "function") {
+        searchPapers(true);
+      }
+    });
+  </script>
+
 </body>
 </html>
