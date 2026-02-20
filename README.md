@@ -25,13 +25,13 @@ cd Automated-workflows
 ```
 
 
-2️⃣ Install n8n (If Not Installed)
+### 2️⃣ Install n8n (If Not Installed)
 ```bash
 npm install -g n8n
 
 ```
 
-3️⃣ Run n8n Locally
+### 3️⃣ Run n8n Locally
 ```bash
 n8n
 
@@ -41,7 +41,7 @@ http://localhost:5678
 ```
 
 
-🔗 Webhook Configuration
+### 🔗 Webhook Configuration
 ```bash
 Your frontend communicates with n8n using a Webhook node.
 
