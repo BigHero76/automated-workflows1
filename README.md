@@ -98,7 +98,7 @@ Or simply double-click index.html
 The page automatically fetches data from your active webhook.
 ```
 
-🧠 How It Works
+### 🧠 How It Works
 ```bash
 Frontend → Webhook → n8n Workflow → Response → Rendered in UI
 Frontend sends POST request
@@ -110,7 +110,7 @@ Webhook returns response
 UI renders response dynamically
 ```
 
-📦 Tech Stack
+### 📦 Tech Stack
 ```bash
 n8n
 HTML
@@ -119,7 +119,7 @@ JavaScript
 Node.js
 ```
 
-Future Improvements
+### Future Improvements
 ```bash
 
 Authentication layer
