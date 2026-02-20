@@ -64,7 +64,7 @@ Activate the workflow
 
 ```
 
-🌍 Webhook URL Format
+### 🌍 Webhook URL Format
 ```bash
 Update your frontend or external service to call:
 
@@ -76,7 +76,7 @@ http://localhost:5678/webhook/webhook
 ```
 
 
-💻 Frontend Structure
+### 💻 Frontend Structure
 ```bash
 📂 Frontend
  ├── index.html   → Main layout
@@ -85,7 +85,7 @@ http://localhost:5678/webhook/webhook
 
 ```
 
-▶️ Run Frontend Locally
+### ▶️ Run Frontend Locally
 ```bash
 You can open it using:
 
