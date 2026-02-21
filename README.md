@@ -119,7 +119,7 @@ JavaScript
 Node.js
 ```
 
-### Future Improvements
+### 📍 Future Improvements
 ```bash
 
 Authentication layer
