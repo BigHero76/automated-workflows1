@@ -186,3 +186,22 @@ function renderRecent() {
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.getElementById("searchBtn");
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      searchPapers();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        searchPapers();
+      }
+    });
+  }
+});
+
