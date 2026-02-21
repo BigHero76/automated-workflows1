@@ -42,10 +42,9 @@ http://localhost:5678
 
 
 ### 🔗 Webhook Configuration
-```bash
+
 ![Workflow Diagram](workflow.png)
 
-```
 
 ### 🔗 Webhook Configuration Commands
 ```bash
