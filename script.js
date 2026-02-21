@@ -98,6 +98,9 @@ function renderResults() {
 
     container.appendChild(card);
   });
+  if (window.MathJax) {
+  MathJax.typeset();
+}
 }
 
 function savePaper(paperId) {
