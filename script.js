@@ -85,22 +85,63 @@ function renderResults() {
     const card = document.createElement("div");
     card.className = "paper-card";
 
+    const preview =
+      paper.summary.length > 220
+        ? paper.summary.slice(0, 220) + "..."
+        : paper.summary;
+
     card.innerHTML = `
-      <div class="paper-title" onclick="openPaper('${paper.link}', '${paper.id}')">
+      <div class="paper-title toggle-summary">
         ${paper.title}
       </div>
-      <div class="paper-summary">${paper.summary}</div>
+
+      <div class="paper-summary preview">
+        ${preview}
+      </div>
+
+      <div class="paper-summary full hidden">
+        ${paper.summary}
+      </div>
+
       <div class="card-actions">
-        <span class="action-link" onclick="savePaper('${paper.id}')">Save for Later</span>
-        <span class="action-link" onclick="openPaper('${paper.link}', '${paper.id}')">Read Paper</span>
+        <span class="action-link save-btn">Save for Later</span>
+        <span class="action-link read-btn">Read Paper</span>
+        <span class="action-link toggle-btn">Read Summary</span>
       </div>
     `;
 
+    // ---------- EVENTS ----------
+
+    const full = card.querySelector(".full");
+    const toggleBtn = card.querySelector(".toggle-btn");
+
+    function toggleSummary() {
+      full.classList.toggle("hidden");
+      toggleBtn.textContent =
+        full.classList.contains("hidden")
+          ? "Read Summary"
+          : "Hide Summary";
+
+      if (window.MathJax) MathJax.typeset();
+    }
+
+    card.querySelector(".toggle-summary")
+        .addEventListener("click", toggleSummary);
+
+    toggleBtn.addEventListener("click", toggleSummary);
+
+    card.querySelector(".save-btn")
+        .addEventListener("click", () => savePaper(paper.id));
+
+    card.querySelector(".read-btn")
+        .addEventListener("click", () =>
+          openPaper(paper.link, paper.id)
+        );
+
     container.appendChild(card);
   });
-  if (window.MathJax) {
-  MathJax.typeset();
-}
+
+  if (window.MathJax) MathJax.typeset();
 }
 
 function savePaper(paperId) {
