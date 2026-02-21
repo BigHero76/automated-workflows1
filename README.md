@@ -45,10 +45,9 @@ http://localhost:5678
 ```bash
 ![Workflow Diagram](workflow.png)
 
-```bash
-
 ```
 
+### 🔗 Webhook Configuration Commands
 ```bash
 Your frontend communicates with n8n using a Webhook node.
 
