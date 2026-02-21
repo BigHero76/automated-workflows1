@@ -43,6 +43,13 @@ http://localhost:5678
 
 ### 🔗 Webhook Configuration
 ```bash
+![Workflow Diagram](workflow.png)
+
+```bash
+
+```
+
+```bash
 Your frontend communicates with n8n using a Webhook node.
 
 Steps to Configure
