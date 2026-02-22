@@ -202,7 +202,10 @@ function openPaper(url, paperId) {
   localStorage.setItem("recentPapers", JSON.stringify(recent));
   window.open(url, "_blank");
 }
-
+function clearRecent() {
+  localStorage.removeItem("recentPapers");
+  renderRecent();
+}
 function renderRecent() {
   const recentIds = JSON.parse(localStorage.getItem("recentPapers")) || [];
   const container = document.getElementById("recentPapers");
