@@ -185,3 +185,12 @@ button {
 .paper-summary {
   transition: all 0.25s ease;
 }
+
+.paper-summary.full::-webkit-scrollbar {
+  width: 6px;
+}
+
+.paper-summary.full::-webkit-scrollbar-thumb {
+  background: var(--accent-light);
+  border-radius: 3px;
+}
