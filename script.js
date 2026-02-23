@@ -55,7 +55,7 @@ function showSection(sectionId) {
     console.log("RAW RESPONSE:", data);
 
     if (Array.isArray(data)) {
-      currentResults = data;
+    currentResults = data.map(item => item.json ?? item);
     } else if (Array.isArray(data.papers)) {
       currentResults = data.papers;
     } else if (Array.isArray(data.data)) {
