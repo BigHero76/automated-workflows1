@@ -110,8 +110,6 @@ function renderResults() {
       </div>
     `;
 
-    // ---------- EVENTS ----------
-
     const full = card.querySelector(".full");
     const toggleBtn = card.querySelector(".toggle-btn");
 
