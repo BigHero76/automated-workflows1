@@ -89,7 +89,7 @@ function renderResults() {
       paper.summary.length > 220
         ? paper.summary.slice(0, 220) + "..."
         : paper.summary;
-
+    console.log(currentResults[0]);
     card.innerHTML = `
       <div class="paper-title toggle-summary">
         ${paper.title}
