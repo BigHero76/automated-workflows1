@@ -131,10 +131,11 @@ Authentication layer
 
 Environment variable support
 
-Docker support
+Docker support(cloud support)
 
-Deployment guide
+Error handling
 
-Error handling UI
+Minimal student vibe User Interface 
+
 ```
 
